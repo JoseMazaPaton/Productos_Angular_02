@@ -10,7 +10,10 @@
                 @if(checkControl('name', 'required')){
                     <p class="error">Campo requerido</p>
                 }
-                @if(checkControl('id', 'pattern')){
+                @if(checkControl('id', 'minlength')){
+                    <p class="error">El ID debe tener 24 caracteres (a-z,A-Z,0-1)</p>
+                }
+                @if(checkControl('id', 'maxlength')){
                     <p class="error">El ID debe tener 24 caracteres (a-z,A-Z,0-1)</p>
                 }
             </div>
@@ -22,7 +25,7 @@
                 @if(checkControl('name', 'required')){
                     <p class="error">Campo requerido</p>
                 }
-                @if(checkControl('name', 'milength')){
+                @if(checkControl('name', 'minlength')){
                     <p class="error">El nombre debe tener al menos 3 caracteres</p>
                 }
             </div>

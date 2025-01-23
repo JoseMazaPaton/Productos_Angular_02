@@ -128,7 +128,7 @@ export class ProductsListComponent {
     this.misProductos.push(prodAlta);
     console.log(this.misProductos);
     console.log(this.misProductosLista);
-    this.misProductosLista.push(prodAlta);
+    //this.misProductosLista.push(prodAlta);
     console.log(this.misProductosLista);
     //this.misProductosLista = [...this.misProductos]
     

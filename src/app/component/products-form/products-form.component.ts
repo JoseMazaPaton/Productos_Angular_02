@@ -20,7 +20,7 @@ export class ProductsFormComponent {
 
   constructor(){
     this.modelForm = new FormGroup({
-      _id: new FormControl(null, [Validators.required, Validators.pattern(/^[a-zA-Z0-9]{24}$/)]),
+      _id: new FormControl(null, [Validators.required, Validators.minLength(24), Validators.maxLength(24),Validators.pattern(/^[a-zA-Z0-9]{24}$/)]),
       name: new FormControl(null, [Validators.required, Validators.minLength(3)]),
       description: new FormControl(null, [Validators.required, Validators.minLength(20), Validators.maxLength(255)]),
       price: new FormControl(null, [Validators.required, Validators.min(0)]),
