@@ -1,0 +1,31 @@
+ #contenedor-card {
+    position: fixed; /* Cambiado a fixed para posicionar relativo a la ventana */
+    top: 50%; /* Posición vertical centrada */
+    left: 50%; /* Posición horizontal centrada */
+    transform: translate(-50%, -50%); /* Ajusta para centrar en el medio de la pantalla */
+    width: 50%; /* Ajusta el ancho del contenido según tus necesidades */
+    height: auto; /* Altura automática, ajustándose al contenido */
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Asegúrate de que esté encima de otros elementos */
+    border-radius: 10px; /* (Opcional) Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* (Opcional) Sombra para resaltar el cuadro */
+}
+.list-group-item img {
+    max-width: 100%;
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 5px; /* Bordes redondeados para la imagen */
+} 
+.list-group-item {
+
+    color: white; /* Texto blanco */ 
+    padding: 10px; /* Espaciado interno */ 
+    text-align: center; /* Alineación centrada del texto */ 
+} 
+button { 
+    width: 100%; /* Botones se adaptan al ancho del contenedor */ 
+    margin-top: 10px; /* Margen superior */ 
+}

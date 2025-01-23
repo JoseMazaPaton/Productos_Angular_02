@@ -1,0 +1,23 @@
+.miContainer {
+    margin-top: 20px;
+}
+
+.miTarjeta{
+    background-color: #f8f9fa; /* Color de fondo claro */
+    border: 1px solid #dee2e6; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 15px; /* Espaciado interno */
+    min-height: 300px; /* Altura mínima para todas las tarjetas */
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en columna */
+    justify-content: space-between; /* Distribuye los elementos dentro de la tarjeta */
+    align-items: center; /* Centra los elementos horizontalmente */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para un diseño más limpio */
+}
+
+.product-img{
+    max-width: 100%;
+    height: auto;
+}
+

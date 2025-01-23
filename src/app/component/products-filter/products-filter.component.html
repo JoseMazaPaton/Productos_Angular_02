@@ -1,0 +1,67 @@
+<section>
+    <div>
+        <form class="row g-2 align-items-center" action="" #miFormulario="ngForm" (ngSubmit)="getDataForm(miFormulario)">
+           
+            <div class="col-auto">
+                <input type="text" class="form-control" id="palabraClave" name="palabraClave" placeholder="Palabra Clave" ngModel>
+            </div>
+            <div class="col-auto">
+                <select name="categoria" id="categoria" type="text" ngModel class="form-select">
+                    <option value="" selected>Categoria</option>
+                    <option value="hombre">Hombre</option>
+                    <option value="mujer">Mujer</option>
+                    <option value="niño">Niño</option>
+                </select>
+            </div>
+            <div class="col-auto">
+                <input type="number" 
+                    placeholder="Precio Minimo"
+                    id="precioMin"
+                    name="precioMin"
+                    class="form-control"
+                    ngModel>
+            </div>
+            <div class="col-auto">
+                <input type="number"
+                    placeholder="Precio Maximo"
+                    id="precioMax"
+                    name="precioMax"
+                    class="form-control"
+                    ngModel>
+            </div>
+            <div class="col-auto d-flex align-items-center">
+                <input type="submit" value="filtrar" class="btn btn-danger mt-0 align-middle">
+            </div>
+            <div class="col-auto d-flex align-items-center">
+                <button   button type="button" class="btn btn-secondary mt-0 align-middle" (click)="resetFiltros(miFormulario)">Reset</button>
+            </div>
+        </form>
+        <div class="d-flex flex-wrap mt-3">
+            @if(filtros.palabraClave != ''){
+                <div class="badge bg-primary text-white me-2">
+                    <span>{{filtros.palabraClave}}</span>
+                    <button type="button" class="btn btn-close btn-sm ms-2" aria-label="Close" (click)="quitarFiltro('palabraClave', miFormulario)">X</button>
+                </div>
+            }
+            @if(filtros.categoria != ''){
+                <div class="badge bg-secondary text-white me-2">
+                    <span>{{filtros.categoria}}</span>
+                    <button type="button" class="btn btn-close btn-sm ms-2" aria-label="Close" (click)="quitarFiltro('categoria', miFormulario)">X</button>
+                </div>
+            }
+            @if(filtros.precioMin != null){
+                <div class="badge bg-success text-white me-2">
+                    <span>{{filtros.precioMin}}</span>
+                    <button type="button" class="btn btn-close btn-sm ms-2" aria-label="Close" (click)="quitarFiltro('precioMin', miFormulario)">X</button>
+                </div>
+            }
+            @if(filtros.precioMax != null){
+                <div class="badge bg-warning text-dark me-2">
+                    <span>{{filtros.precioMax}}</span>
+                    <button type="button" class="btn btn-close btn-sm ms-2" aria-label="Close" (click)="quitarFiltro('precioMax', miFormulario)">X</button>
+                </div>
+            }
+
+        </div>
+    </div>
+</section>

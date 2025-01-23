@@ -1,0 +1,14 @@
+.form-control, .form-select { 
+    min-width: 150px; /* Ajusta el ancho mínimo según sea necesario */ 
+}
+ #miFormulario .col-auto { 
+    margin-bottom: 10px; /* Espaciado inferior para resoluciones más pequeñas */ 
+}
+ #miFormulario input[type="submit"] {
+     margin-top: 0;
+ /* Elimina el margen superior para el botón de envío */
+}
+#miFormulario .btn { 
+    margin-top: 0; /* Asegura que el margen superior sea cero */ 
+
+}

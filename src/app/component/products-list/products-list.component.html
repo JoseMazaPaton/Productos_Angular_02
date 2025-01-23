@@ -1,0 +1,25 @@
+<section class="container mt-3 pt-3 text-center">
+    <br><br>
+    
+    <app-products-filter (filtroProducto)="actualizarLista($event)"></app-products-filter>
+    <div class="container row g-3 miContainer">
+        @for (producto of misProductosLista; track producto._id){
+            <div class="col-md-3 col-sm-6 col-12 bg-light border rounded p-3 shadow text-center m-1 miTarjeta">
+                <img class="product-img" src="{{producto.image}}" alt="" 
+                (click)="mostrarDetalle(producto)">
+                <p>{{producto.name}}</p>
+                <p>{{producto.price}}</p>
+            </div>
+        }
+        @if (mostrar) {
+            <app-products-card [miProducto]="productoSeleccionado" (botonCerrar)="cierreVentana($event)" (botonEliminar)="quitarProducto($event)"></app-products-card>
+        }
+        <div class="col-md-3 col-sm-6 col-12 bg-light border rounded p-3 shadow text-center m-1 miTarjeta" (click)="mostrarAlta($event)">
+          <img class="product-img pt-4 " src="https://cdn.icon-icons.com/icons2/1369/PNG/512/-add-circle_90021.png" alt="">
+        </div>
+        @if (despliegueAlta){
+            <app-products-form (productoAlta)="anadirProducto($event)" (cerrarAlta)="cierreAlta($event)"></app-products-form>
+        }
+    </div>
+
+</section>
