@@ -26,3 +26,16 @@ input.ng-invalid.ng-touched{
     border-radius: 10px; /* (Opcional) Bordes redondeados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* (Opcional) Sombra para resaltar el cuadro */
 }
+
+.cerrar-btn {  
+    position: absolute;
+   top: 2%;
+   right: 2%; 
+   z-index: 10;
+   width: 40px;
+   height: 40px;
+   justify-content: center;
+   text-align: center;
+   padding: 0px;
+   border-radius: 100%;
+} 

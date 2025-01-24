@@ -1,4 +1,7 @@
 <div id="contenedor-card" class="card shadow">
+    
+    <button class="btn btn-outline-warning cerrar-btn" (click)="cerrarVentana()">X </button>
+    
     <ul class="list-group m-1">
         <li class="list-group-item bg-transparent border-0"><img src="{{miProducto.image}}" alt=""> </li>
         <li class="list-group-item bg-transparent border-0"><strong>Descripcion: </strong>{{miProducto.description}}</li>
@@ -7,8 +10,8 @@
         <li class="list-group-item bg-transparent border-0"><button class="btn btn-danger mt-1" (click)="eliminarProducto()">Eliminar</button></li>
         <!-- <button class="btn btn-danger mt-1" (click)="eliminarProducto()">Eliminar</button> -->
     </ul>
-    <div class="mb-3 d-flex justify-content-center">
-        <button class="btn btn-warning" (click)="cerrarVentana()">Cerrar</button>
-    </div>
+    <!-- <div class="mb-3 d-flex justify-content-center">
+        <button class="btn btn-warning" (click)="cerrarVentana()">X</button>
+    </div> -->
     
 </div>

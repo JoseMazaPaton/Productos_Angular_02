@@ -1,8 +1,8 @@
 <section class="container mt-3">
-
+    
     <div id="contenedor-card" class="card shadow">
-        
-        <form [formGroup]="modelForm" (ngSubmit)="getDataForm()">
+        <button class="btn btn-outline-warning cerrar-btn" (click)="cierreAlta()">X</button>
+        <form [formGroup]="modelForm" (ngSubmit)="getDataForm()" class="border-1 border-info rounded">
             <div>
                 <label for="_id" class="form-label mt-3">Id: </label>
                 <input class="form-control" type="text" id="_id" 
@@ -98,8 +98,8 @@
 
             <input type="submit" value="enviar" class="btn btn-danger mt-3" [disabled]="!modelForm.valid">
         </form>
-        <div class="mb-3 mt-2 d-flex justify-content-center">
+        <!-- <div class="mb-3 mt-2 d-flex justify-content-center">
             <button class="btn btn-warning" (click)="cierreAlta()">Cerrar</button>
-        </div>
+        </div> -->
     </div>
 </section>
